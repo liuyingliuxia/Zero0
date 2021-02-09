@@ -7,33 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.lolinico.technical.open.parent.BaseActivity;
+import com.lolinico.technical.open.parent.RootView;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.zeasn.zero0.R;
-import com.zeasn.zero0.base.BaseActivity;
 import com.zeasn.zero0.util.RLog;
+import com.zeasn.zero0.view.WelcomeView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
 public class WelcomeActivity extends BaseActivity {
 
-    @BindView(R.id.tvTest)
-    TextView tvTest;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
-        startActivity(new Intent(this , MainActivity.class));
-    }
-
-    @OnClick(R.id.tvTest)
-    private void OnClick(View view){
-        switch (view.getId()){
-            case R.id.tvTest:
-                CrashReport.testJavaCrash();
-                RLog.e("you touch tvTest!");
-                break;
-        }
+    public RootView bindRootChild() {
+        return new WelcomeView(this);
     }
 }

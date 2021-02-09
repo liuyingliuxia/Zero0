@@ -3,6 +3,9 @@ package com.zeasn.zero0;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.multidex.MultiDex;
+
 import com.tencent.bugly.crashreport.CrashReport;
 import com.zeasn.zero0.util.AppUtil;
 import com.zeasn.zero0.util.RLog;
@@ -13,13 +16,16 @@ import com.zeasn.zero0.util.RLog;
  * Email:miracle.lin@zeasn.com
  * Descripe:
  */
-public class MyApplication extends Application {
+public class MyApplication extends Application implements Thread.UncaughtExceptionHandler  {
     private static Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
         context = this;
+
+        Thread.setDefaultUncaughtExceptionHandler(this);
+
         // 获取当前包名
         String packageName = context.getPackageName();
         // 获取当前进程名
@@ -43,4 +49,14 @@ public class MyApplication extends Application {
         return context;
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+
+    @Override
+    public void uncaughtException(@NonNull Thread t, @NonNull Throwable e) {
+        AppUtil.writeErrorLog(e);
+    }
 }

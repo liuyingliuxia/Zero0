@@ -14,4 +14,10 @@ public class RLog {
             Log.v(TAG, text);
     }
 
+
+    public static void e(String text) {
+        if (isTag)
+            Log.e(TAG, text);
+    }
+
 }

@@ -3,7 +3,7 @@
 
     <!-- Automatically generated file. DO NOT MODIFY -->
 
-    <!-- Values from build type: release -->
+    <!-- Value from build type: release -->
     <string name="server_type" translatable="false">prod</string>
 
 </resources>
