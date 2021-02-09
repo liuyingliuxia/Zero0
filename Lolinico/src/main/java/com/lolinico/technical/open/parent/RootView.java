@@ -29,7 +29,7 @@ public abstract class RootView<T extends RxPresenter> extends LinearLayout {
         //设置沉浸式状态栏
         isOpenStatusBar=true;
         if (isOpenStatusBar)
-            StatusBarCompat.setStatusBarColor((Activity) context,getResources().getColor(R.color.white), true);//todo 目前的效果是全屏了，无状态栏
+            StatusBarCompat.setStatusBarColor((Activity) context,getResources().getColor(R.color.white), true);//todo 跟随app主题颜色自动变化
         setPresenterTag();
         inflateById();
         initBinder();
