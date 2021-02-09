@@ -64,6 +64,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
     testImplementation 'junit:junit:4.13.1'
+    implementation project(path: ':Lolinico')
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //沉浸式状态栏

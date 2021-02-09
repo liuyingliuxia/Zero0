@@ -17,5 +17,20 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public int getContentId() {
+        return 0;
+    }
+
+    @Override
+    public void requestDataAction() {
+
+    }
+
 
 }

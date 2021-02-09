@@ -1,0 +1,53 @@
+R_DEF: Internal format may change without notice
+local
+attr? activeColor
+attr? activeRadius
+attr? activeType
+attr? behindOffset
+attr? behindScrollScale
+attr? behindWidth
+attr? centered
+attr? circleSeparation
+attr? fadeDegree
+attr? fadeEnabled
+attr? fadeOut
+attr? inactiveColor
+attr? inactiveType
+attr? mode
+attr? radius
+attr? selectorDrawable
+attr? selectorEnabled
+attr? shadowDrawable
+attr? shadowWidth
+attr? sidebuffer
+attr? touchModeAbove
+attr? touchModeBehind
+attr? viewAbove
+attr? viewBehind
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
+dimen shadow_width
+dimen slidingmenu_offset
+id TAG_PRESENTER
+id TAG_ROOTVIEW
+id content_view_bg
+id fullscreen
+id left
+id margin
+id menu_frame
+id recyclerview
+id right
+id selected_view
+id slidingmenumain
+id viewpager
+layout menu_frame_left
+layout menu_view
+layout slidingmenumain
+layout view_pager
+string server_type
+styleable CircleFlowIndicator activeColor inactiveColor radius centered fadeOut inactiveType activeType circleSeparation activeRadius
+styleable SlidingMenu mode viewAbove viewBehind behindOffset behindWidth behindScrollScale touchModeAbove touchModeBehind shadowDrawable shadowWidth fadeEnabled fadeDegree selectorEnabled selectorDrawable
+styleable ViewFlow sidebuffer
