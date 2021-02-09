@@ -1,10 +1,14 @@
 package com.zeasn.zero0.view;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 
 import com.lolinico.technical.open.parent.RootView;
 import com.lolinico.technical.open.parent.RxPresenter;
 import com.zeasn.zero0.R;
+import com.zeasn.zero0.presenter.WelcomePresenter;
+import com.zeasn.zero0.ui.MainActivity;
 
 public class WelcomeView extends RootView {
     public WelcomeView(Context context) {
@@ -13,7 +17,7 @@ public class WelcomeView extends RootView {
 
     @Override
     public RxPresenter bindPresenter() {
-        return null;
+        return new WelcomePresenter(this);
     }
 
     @Override
@@ -28,6 +32,11 @@ public class WelcomeView extends RootView {
 
     @Override
     public void requestDataAction() {
+        ((WelcomePresenter) mPresenter).getMainPost();
+    }
 
+    public void jumpToMainActivity(){
+        mContext.startActivity(new Intent(mContext , MainActivity.class));
+        ((Activity) mContext).finish();
     }
 }

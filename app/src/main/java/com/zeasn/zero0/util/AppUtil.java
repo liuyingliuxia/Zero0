@@ -82,7 +82,7 @@ public class AppUtil {
                 e.printStackTrace();
             }
         }
-        Log.e("error", "崩溃信息\n" + info);
+        Log.e("error===zero0", "崩溃信息\n" + info);
         //下面生成错误日志的代码可以注释
         File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/debug/log/");
         if (!dir.exists()) {

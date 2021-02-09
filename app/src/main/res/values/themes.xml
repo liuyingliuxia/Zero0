@@ -14,10 +14,16 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Zero0.Fullscreen" parent="Theme.Zero0">
-        <item name="android:actionBarStyle">@style/Widget.Theme.Zero0.ActionBar.Fullscreen</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
     <style name="ThemeOverlay.Zero0.FullscreenContainer" parent="">
