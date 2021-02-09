@@ -9,6 +9,7 @@ import android.view.KeyEvent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.lolinico.technical.open.entity.Event;
 import com.lolinico.technical.open.utils.EventBusUtil;
 import com.lolinico.technical.open.utils.RLog;
@@ -27,6 +28,7 @@ public abstract class BaseActivity<R extends RootView> extends AppCompatActivity
         super.onCreate(savedInstanceState);
         mRootView = bindRootChild();
         mRootView.onCreate();
+
         if (isRegisterEventBus())
             EventBusUtil.register(this);
     }

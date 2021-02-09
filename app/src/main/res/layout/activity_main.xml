@@ -1,21 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".ui.MainActivity">
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <com.zeasn.zero0.widget.NoScrollViewPager
+        android:id="@+id/nvpMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/vCutLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background = "@color/color12" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:paddingTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbStory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/tool_state_pressed_story"
+                android:gravity="center"
+                android:text="@string/tab_story"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@drawable/state_selected_tab" />
+
+            <RadioButton
+                android:id="@+id/rbTopic"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/tool_state_pressed_topic"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@drawable/state_selected_tab"
+                android:text="@string/tab_topic"/>
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:src="@drawable/ic_add"/>
+
+
+            <RadioButton
+                android:id="@+id/rbMessage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/tool_state_pressed_message"
+                android:gravity="center"
+                android:text="@string/tab_story"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@drawable/state_selected_tab" />
+
+            <RadioButton
+                android:id="@+id/rbMy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/tool_state_pressed_my"
+                android:gravity="center"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@drawable/state_selected_tab"
+                android:text="@string/tab_topic"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+

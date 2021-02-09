@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zero0</string>
+    <string name="tab_story">STORY</string>
+    <string name="tab_topic">TOPIC</string>
+    <string name="tab_message">MESSAGE</string>
+    <string name="tab_my">MY</string>
+
+</resources>

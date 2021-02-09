@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.widget.LinearLayout;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.lolinico.technical.open.entity.Event;
 import com.steelbar.R;
 
@@ -19,11 +20,16 @@ import butterknife.ButterKnife;
 public abstract class RootView<T extends RxPresenter> extends LinearLayout {
     public Context mContext;
     protected T mPresenter;
+    boolean isOpenStatusBar =true;//是否开启沉浸式状态栏
 
     public RootView(Context context) {
         super(context);
         mContext = context;
         mPresenter = bindPresenter();
+        //设置沉浸式状态栏
+        isOpenStatusBar=true;
+        if (isOpenStatusBar)
+            StatusBarCompat.setStatusBarColor((Activity) context,getResources().getColor(R.color.white), true);//todo 目前的效果是全屏了，无状态栏
         setPresenterTag();
         inflateById();
         initBinder();
