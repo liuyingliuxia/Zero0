@@ -57,6 +57,6 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
 
     @Override
     public void uncaughtException(@NonNull Thread t, @NonNull Throwable e) {
-        AppUtil.writeErrorLog(e);
+//        AppUtil.writeErrorLog(e);
     }
 }

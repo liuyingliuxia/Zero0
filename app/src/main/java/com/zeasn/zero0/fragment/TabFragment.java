@@ -8,7 +8,7 @@ import com.lolinico.technical.open.parent.BaseFragment;
 import butterknife.BindView;
 
 /**
- * Created by Rico on 2019/1/14.
+ * 内容形式都差不多时使用TabFragment
  */
 public class TabFragment extends BaseFragment {
     int tabType = -1;
