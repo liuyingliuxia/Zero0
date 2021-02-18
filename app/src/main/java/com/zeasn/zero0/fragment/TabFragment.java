@@ -3,12 +3,14 @@ package com.zeasn.zero0.fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.lolinico.technical.open.parent.BaseFragment;
 import butterknife.BindView;
 
 /**
  * 内容形式都差不多时使用TabFragment
+ * @deprecated
  */
 public class TabFragment extends BaseFragment {
     int tabType = -1;
@@ -31,7 +33,7 @@ public class TabFragment extends BaseFragment {
 //    }
 
     @Override
-    public View setContent(LayoutInflater inflater) {
+    public View setContent(LayoutInflater inflater, ViewGroup... container) {
         return null;
     }
 

@@ -12,6 +12,11 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainNavActivity"
+            android:label="@string/title_activity_main_nav">
+
+        </activity>
         <activity android:name=".ui.SettingActivity" />
         <activity android:name=".ui.SearchActivity" />
         <activity android:name=".ui.WelcomeActivity">
@@ -31,7 +36,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
     </application>
 

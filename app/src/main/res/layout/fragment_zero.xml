@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <com.zeasn.zero0.widget.VpSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.zeasn.zero0.widget.VpSwipeRefreshLayout
         android:id="@+id/srlMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,13 +14,20 @@
 
         <!--    ViewPager显示的内容+ 下拉刷新-->
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vpMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/vpMain"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:orientation="vertical">-->
+<!--        </androidx.viewpager.widget.ViewPager>-->
 
-        </androidx.viewpager.widget.ViewPager>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:text="@string/tab_story"
+            android:textColor="@color/white"
+            android:textSize="100sp" />
 
     </com.zeasn.zero0.widget.VpSwipeRefreshLayout>
 

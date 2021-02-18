@@ -1,7 +1,9 @@
 package com.lolinico.technical.open.parent;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = setContent(inflater);
+        view = setContent(inflater, container);
         unbinder = initBinder(view);
         initView(view);
         requestDataAction();
@@ -33,7 +35,9 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 设置view
      **/
-    public abstract View setContent(LayoutInflater inflater);
+//    public abstract View setContent(LayoutInflater inflater);
+
+    public abstract View setContent(LayoutInflater inflater, ViewGroup...container);
 
     /**
      * 初始化界面

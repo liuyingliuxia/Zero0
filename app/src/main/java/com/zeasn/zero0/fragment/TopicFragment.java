@@ -14,8 +14,7 @@ import com.zeasn.zero0.R;
 public class TopicFragment extends BaseFragment {
 
     @Override
-    public View setContent(LayoutInflater inflater) {
-
+    public View setContent(LayoutInflater inflater, ViewGroup... container) {
         return inflater.inflate(R.layout.fragment_topic, null);
     }
 

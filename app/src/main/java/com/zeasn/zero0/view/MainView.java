@@ -61,15 +61,15 @@ public class MainView extends RootView {
 
     @Override
     public void initView() {
-        if (rbStory != null)
-            rbStory.setChecked(true);
-        mainViewPagerAdapter = new MainViewPagerAdapter(MainActivity.supportFragmentManager,
-                FragmentStatePagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT);
-        //设置预加载数 全部的fragment
-        vp2Main = new NoScrollViewPager(mContext);
-        vp2Main.setOffscreenPageLimit(4);
-        vp2Main.setAdapter(mainViewPagerAdapter);
-        vp2Main.setCurrentItem(Type.TAB_FRAGMENT_TYPE_TOPIC);
+//        if (rbStory != null)
+//            rbStory.setChecked(true);
+//        mainViewPagerAdapter = new MainViewPagerAdapter(MainActivity.supportFragmentManager,
+//                FragmentStatePagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT);
+//        //设置预加载数 全部的fragment
+//        vp2Main = new NoScrollViewPager(mContext);
+//        vp2Main.setOffscreenPageLimit(4);
+//        vp2Main.setAdapter(mainViewPagerAdapter);
+//        vp2Main.setCurrentItem(Type.TAB_FRAGMENT_TYPE_TOPIC);
     }
 
     @Override

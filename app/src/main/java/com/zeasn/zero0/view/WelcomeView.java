@@ -9,6 +9,7 @@ import com.lolinico.technical.open.parent.RxPresenter;
 import com.zeasn.zero0.R;
 import com.zeasn.zero0.presenter.WelcomePresenter;
 import com.zeasn.zero0.ui.MainActivity;
+import com.zeasn.zero0.ui.MainNavActivity;
 
 public class WelcomeView extends RootView {
     public WelcomeView(Context context) {
@@ -36,7 +37,7 @@ public class WelcomeView extends RootView {
     }
 
     public void jumpToMainActivity(){
-        mContext.startActivity(new Intent(mContext , MainActivity.class));
+        mContext.startActivity(new Intent(mContext , MainNavActivity.class));
         ((Activity) mContext).finish();
     }
 }

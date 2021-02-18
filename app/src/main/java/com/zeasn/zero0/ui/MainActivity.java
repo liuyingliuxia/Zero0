@@ -18,6 +18,10 @@ import com.zeasn.zero0.R;
 import com.zeasn.zero0.adapter.MainViewPagerAdapter;
 import com.zeasn.zero0.bean.Type;
 import com.zeasn.zero0.databinding.ActivityMainBinding;
+import com.zeasn.zero0.fragment.MessageFragment;
+import com.zeasn.zero0.fragment.MyFragment;
+import com.zeasn.zero0.fragment.TopicFragment;
+import com.zeasn.zero0.fragment.ZeroFragment;
 import com.zeasn.zero0.util.RLog;
 import com.zeasn.zero0.view.MainView;
 import com.zeasn.zero0.widget.NoScrollViewPager;
@@ -26,7 +30,7 @@ import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static FragmentManager supportFragmentManager;
+    //    public static FragmentManager supportFragmentManager;
     private ActivityMainBinding binding;
     //    @BindView(R.id.vp2Main)
     NoScrollViewPager vp2Main;
@@ -36,7 +40,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        supportFragmentManager = this.getSupportFragmentManager();
+//        supportFragmentManager = this.getSupportFragmentManager();
+        if (savedInstanceState == null) {
+            ZeroFragment zeroF = new ZeroFragment();
+            MyFragment myF = new MyFragment();
+            TopicFragment topicFragment = new TopicFragment();
+            MessageFragment messageFragment = new MessageFragment();
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.vp2Main, zeroF)
+                    .add(R.id.vp2Main, myF)
+                    .add(R.id.vp2Main, topicFragment)
+                    .add(R.id.vp2Main, messageFragment)
+                    .commit();
+        }
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
