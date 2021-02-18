@@ -1,5 +1,6 @@
 package com.zeasn.zero0.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,8 +24,9 @@ import com.zeasn.zero0.widget.NoScrollViewPager;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-
+@SuppressLint("NonConstantResourceId")
 public class MainView extends RootView {
+
     @BindView(R.id.rbStory)
     RadioButton rbStory;
     @BindView(R.id.rbMessage)
